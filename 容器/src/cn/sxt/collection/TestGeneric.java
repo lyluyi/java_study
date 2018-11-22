@@ -1,0 +1,42 @@
+package cn.sxt.collection;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+// 测试泛型 限定参数数据类型
+
+public class TestGeneric {
+	public static void main(String[] args) {
+		MyCollection<String> mc = new MyCollection<String>();
+		
+		mc.set("aaa", 0);
+//		mc.set(888, 1); // 泛型定义传入的String 因此报错
+		mc.set("888", 1);
+		mc.set("ccc", 2);
+		
+//		System.out.println(mc.get(1));
+		
+		String a = mc.get(1);
+		
+		// 为什么这里要转string 
+		// 没有用泛型做限定之前 需要加String 类型转换
+		String b = (String)mc.get(0);
+		
+		List list = new ArrayList<>();
+		Map map = new HashMap<>();
+	}
+}
+
+class MyCollection<E> {
+		Object[] objs = new Object[5];
+		
+		public void set(E e, int index) {
+			objs[index] = e;	
+		}
+		
+		public E get(int index) {
+				return (E) objs[index];
+		}
+}

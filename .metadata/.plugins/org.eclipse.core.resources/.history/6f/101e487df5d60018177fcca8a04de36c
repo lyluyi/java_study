@@ -1,0 +1,21 @@
+package cn.sxt.mycollection;
+
+// 自定义一个链表
+//  还需要一个节点对象 Node 
+
+public class SxtLinkedList01 {
+	
+		private Node first;
+		private Node last;
+		
+		private int size;
+		
+		// 开始为[]
+		public void add(Object obj) {
+			Node node = new Node(obj);
+			
+			if (first == null) { // 第一个节点为null时
+				first = node; // 将node给头节点
+			}
+		}
+}

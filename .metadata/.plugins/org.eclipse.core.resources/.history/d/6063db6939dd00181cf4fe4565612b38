@@ -1,0 +1,43 @@
+package com.sxt.io;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;import javax.imageio.ImageTypeSpecifier;
+
+/*
+ * 
+ * 1、将图片读取到字节数组中
+ * 2、字节数据写出道文件 FileInputStream
+ * 3、程序到字节数组 ByteArrayOutputStream
+ * 
+ *  字节数组输出流
+ *  
+ * 理解操作步骤: 分段读取
+ * 
+ * 1、创建源
+ * 2、选择流
+ * 3、操作
+ * 4、释放资源
+ * 
+ * */ 
+
+public class IOTest09 {
+
+		public static void main(String[] args) {
+				
+		}
+		
+		// 图片读取到字节数据
+		public static void fileToByteArray(String filePath) {
+				
+		}
+		
+		// 字节数组写出到图片
+		public static void byteArrayToFile(byte[] src, String filePath) {
+				
+		}
+}

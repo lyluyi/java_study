@@ -1,0 +1,5 @@
+package com.sxt.udp;
+
+public class UdpServer {
+
+}

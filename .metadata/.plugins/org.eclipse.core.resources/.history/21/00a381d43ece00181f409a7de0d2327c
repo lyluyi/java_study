@@ -1,0 +1,39 @@
+package cn.sxt.arrays;
+
+// 测试接口 Interface
+
+public class TestInterface {
+	public static void main(String[] args) {
+		System.out.println("aa");
+	}
+}
+
+/*
+ * 飞行接口
+ */
+
+interface volant {
+	int FLY_HEIGHT = 1000;
+ 	void fly();
+}
+
+// 善良接口
+
+interface Honest {
+	void helpOther();
+}
+
+class Angel implements volant,Honest {
+	
+	@Override
+	
+	public void helpOther() {
+		
+	}
+
+@Override
+public void fly() {
+		// TODO Auto-generated method stub
+		
+}
+}

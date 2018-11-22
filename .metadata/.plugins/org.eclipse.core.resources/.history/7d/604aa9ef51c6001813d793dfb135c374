@@ -1,0 +1,26 @@
+// 方法重载：
+/*
+ * 
+ * 
+ * 方法重载的条件：形参类型、参数个数、形参顺序不同。但是只有返回值不同
+ * 不构成方法重载
+ * 
+ * 只有形参名称不同 也不构成方法重载
+ * */
+public class TestOverload {
+	public static void main(String[] args) {
+			
+	}
+	
+	// 求和
+	public static int add(int n1, int n2) {
+		int sum = n1 + n2;
+		return sum;
+	}
+	
+//	public static double add(int n1, int n2) { // 声明形参的时候 就会报错
+//		double sum = n1 + n2;
+//		return sum;
+//	}
+//	
+}

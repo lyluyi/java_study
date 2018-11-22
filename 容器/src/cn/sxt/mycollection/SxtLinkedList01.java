@@ -1,0 +1,58 @@
+package cn.sxt.mycollection;
+
+// 自定义一个链表
+//  还需要一个节点对象 Node 
+
+public class SxtLinkedList01 {
+	
+		private Node first;
+		private Node last;
+		
+		private int size;
+		
+		// 开始为[]
+		public void add(Object obj) {
+			Node node = new Node(obj);
+			
+			if (first == null) { // 第一个节点为null时
+				
+//				node.previous = null;
+//				node.next = null;
+					
+				first = node; // 将node给头节点
+				last = node; // node也作尾节点
+			} else {
+				node.previous = last;
+				node.next = null;
+				
+				last.next = node;
+				last = node;
+			}
+		}
+		
+		@Override
+		public String toString() { 
+			// [a,b,c] first = a, last = c
+				StringBuilder sb = new StringBuilder("[");
+				Node temp = first;
+				while(temp != null) {
+					sb.append(temp.element + ",");
+					System.out.println(temp.element);
+					temp = temp.next;
+				}
+				sb.setCharAt(sb.length()-1, ']');
+			return sb.toString();
+		}
+		
+		public static void main(String[] args) {
+				SxtLinkedList01 list = new SxtLinkedList01();
+				
+				list.add("a");
+				list.add("b");
+				list.add("c");
+				
+				System.out.println(list);
+				
+		}
+		
+}

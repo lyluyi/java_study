@@ -1,0 +1,25 @@
+package cn.sxt.collection;
+
+// ≤‚ ‘∑∫–Õ
+
+public class TestGeneric {
+	public static void main(String[] args) {
+		MyCollection mc = new MyCollection();
+		
+		mc.set("aaa", 0);
+		mc.set("bbb", 1);
+		mc.set("ccc", 2);
+	}
+}
+
+class MyCollection {
+		Object[] objs = new Object[5];
+		
+		public void set(Object obj, int index) {
+			objs[index] = obj;	
+		}
+		
+		public Object get(int index) {
+				return objs[index];
+		}
+}

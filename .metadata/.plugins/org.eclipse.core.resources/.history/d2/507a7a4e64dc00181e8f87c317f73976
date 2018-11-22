@@ -1,0 +1,17 @@
+package com.sxt.io;
+
+// 递归
+/*
+ * 递归头: 何时结束递归
+ * 递归体： 何时重复调用
+ * 
+ * */
+
+public class DirDemo03 {
+		
+		public static void main(String[] args) {
+				
+				
+		}
+		
+}

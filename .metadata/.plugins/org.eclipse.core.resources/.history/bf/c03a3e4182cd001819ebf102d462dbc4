@@ -1,0 +1,38 @@
+package cn.sxt.oo2;
+
+// final 修饰符
+
+public class TestFinal {
+		public static void main(String args[]) {
+	
+			static void animalCry(Animal a) { // 传Animal a的实例（父类）的实例 可以保证气他子类也可以调用 
+				a.shout();											// 通过父类引用指向子类
+			}
+			
+	
+			
+		}
+
+		class Animal {
+			public void shout() {
+				System.out.println("叫了一声");
+			}
+			
+			
+		}
+
+		class Dog extends Animal { 
+			public void shout() { // 重写父类方法
+				System.out.println("狗叫");
+			}
+			
+			public void seeDoor() {
+					System.out.println("看门");
+			}
+		}
+
+		class Cat extends Animal {
+			public void shout() {
+				System.out.println("猫叫");
+			}
+		}

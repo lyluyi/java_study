@@ -1,0 +1,33 @@
+package cn.sxt.oo2;
+
+public class TestPolym {
+	public static void main(String args[]) {
+		Animal a = new Animal();
+		animalCry(a);
+		
+		Animal d = new Dog();
+		animalCry(d);
+	}
+	
+	static void animalCry(Animal a) {
+		a.shout();
+	}
+}
+
+class Animal {
+	public void shout() {
+		System.out.println("叫了一声");
+	}
+}
+
+class Dog extends Animal { 
+	public void shout() { // 重写父类方法
+		System.out.println("狗叫");
+	}
+}
+
+class Cat extends Animal {
+	public void shout() {
+		System.out.println("猫叫");
+	}
+}

@@ -1,0 +1,33 @@
+package com.sxt.io;
+
+import java.io.File;
+import java.io.IOException;
+
+/*
+ * 其它信息：
+ * createNewFile() // 创建文件  不存在才创建 
+ * 
+ * delete()
+ * 
+ * **/
+
+public class FileDemo06 {
+		
+		public static void main(String[] args) throws IOException {
+				File src = new File("D:/workspace/IO/src/IO.txt");
+				src.createNewFile();
+				boolean flag = src.createNewFile();
+				System.out.println(flag); // false 已经存在了 所以为false
+				
+				// 不能创建文件夹
+				
+				src = new File("D:/workspace/aaa");
+				flag = src.createNewFile(); // 生成了空的 没有后缀的aaa的文件 但不是文件夹
+				System.out.println(flag); // 第一次 不存在aaa是运行创建 true 
+				
+				flag = src.delete();
+				System.out.println(flag); // true
+								
+		}
+
+}

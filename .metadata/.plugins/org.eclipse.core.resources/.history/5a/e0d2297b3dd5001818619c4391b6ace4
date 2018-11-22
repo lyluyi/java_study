@@ -1,0 +1,12 @@
+package cn.sxt.exception;
+
+public class Test01 {
+	public static void main(String[] args) {
+		String str = null;
+//		str.length(); // java.lang.NullPointerException ø’÷∏’Î
+		if (str != null) {
+			System.out.println(str.length());
+		}
+	}
+
+}

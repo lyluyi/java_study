@@ -1,0 +1,89 @@
+package com.sxt.io;
+
+import java.io.File;
+
+/*
+ * 使用面向对象
+ * 
+ * 统计文件夹大小
+ * 
+ * 打印下级目录
+ * 
+ * */
+
+public class DirCount {
+		
+		/*
+		 * 这里的len 为什么没有static关键字
+		 * 
+		 * 
+		 * 然后 private void count(File src) 这个方法也不需要static关键字 给其中任意一个加上static报错
+		 * 
+		 * 同时加上又不会报错！
+		 * 
+		 * */
+		
+		// 文件夹路径
+		private String path;
+		// 大小
+		private  long len;
+		// 文件的个数
+		private int fileSize;
+		// 文件夹的个数
+		private int dirSize;
+		// 源
+		private File src;
+		
+		// 构造器
+		public DirCount(String path) {
+				super();
+				this.path = path;
+				this.src = new File(path);
+				
+				// 调用count 传入this.src
+				count(this.src);
+		}
+		
+		// 统计大小
+    private void count(File src) {
+    				
+				if (src !=null && src.exists()) {
+						
+						if (src.isFile()) { // 获取大小
+								len += src.length();
+								this.fileSize++;
+						} else { // 下级目录
+								this.dirSize++;
+								for (File s : src.listFiles()) {
+										count(s);
+								}
+						}
+				}
+		}
+    
+		public long getLen() {
+				return len;
+		}
+		// ?????????????????/
+		// 为什么不要set方法  因为只需要get获取值 并没有需要修改private的需求
+		public int getFileSize() {
+				return fileSize;
+		}
+
+		public int getDirSize() {
+				return dirSize;
+		}
+
+		public static void main(String[] args) {
+				DirCount dirCount = new DirCount("D:/workspace/IO");
+				System.out.println(dirCount.getLen() + "--->" + dirCount.getFileSize() + "--->" + dirCount.getDirSize());  
+				// 200119--->34--->13
+				 
+				// ?????????  200338--->34--->13
+				System.out.println(dirCount.getLen() + "--->" + dirCount.fileSize + "--->" + dirCount.dirSize);  
+				// 和上面区别在哪里 一个是通过方法返回 一个是直接调用私有变量的属性值？
+		} 
+		
+		
+}
+

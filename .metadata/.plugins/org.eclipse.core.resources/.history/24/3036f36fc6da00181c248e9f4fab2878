@@ -1,0 +1,63 @@
+package cn.sxt.collection;
+
+import java.util.*;
+import java.util.Map.Entry;
+
+// 测试迭代器遍历List Set Map
+
+public class TestIterator {
+		
+		public static void main(String[] args) {
+				testIteratorList();
+				
+				testIteratorSet();
+		}
+		
+		public static void testIteratorList() {
+				List<String> list = new ArrayList<>();
+				
+				list.add("aa");
+				list.add("bb");
+				list.add("cc");
+				list.add("dd");
+				
+				
+				// 使用迭代器遍历list
+				for (Iterator<String> iter=list.iterator(); iter.hasNext();) {
+						// iter=list.iterator() 返回一个迭代器  iter.hasNext() 判断 有没有下一个
+						String temp = iter.next();
+						System.err.println(temp);
+				}
+		}
+		
+		
+		public static void testIteratorSet() {
+				Set<String> set = new HashSet<>();
+				
+				set.add("aa");
+				set.add("bb");
+				set.add("cc");
+				set.add("dd");
+				
+				// 使用迭代器遍历list
+				for (Iterator<String> iter=set.iterator(); iter.hasNext();) {
+						// iter=set.iterator() 返回一个迭代器  iter.hasNext() 判断 有没有下一个
+						String temp = iter.next();
+						System.err.println(temp);
+				}
+		}
+
+
+    public static void testIteratorMap() {
+    		Map<Integer, String> map = new HashMap<>();
+    		
+    		map.put(100, "aa");
+    		map.put(200, "bb");
+    		map.put(300, "cc");
+    		
+    		Set<Entry<Integer, String>> ss = map.entrySet();
+    		
+    }
+
+}
+

@@ -1,0 +1,8 @@
+package cn.sxt.mycollection;
+
+// 自定义一个链表
+//  还需要一个节点对象 Node 
+
+public class SxtLinkedList01 {
+	
+}

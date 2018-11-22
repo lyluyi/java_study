@@ -1,0 +1,15 @@
+// 测试递归
+public class TestRecursion01 {
+	public static void main(String[] agrs) {
+		
+	}
+	
+	static void a() {
+		System.out.println("a");
+		a(); // 自己调用自己
+	}
+	
+	static void b() {
+		System.out.println("B");
+	}
+}

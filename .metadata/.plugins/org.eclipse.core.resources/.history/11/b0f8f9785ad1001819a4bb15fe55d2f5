@@ -1,0 +1,28 @@
+package cn.sxt.array2;
+
+// 测试数组拷贝
+
+public class TestArrayCopy {
+	public static void main(String[] args) {
+		testBasicCopy2();
+	}
+	
+	// 数组的copy
+	public static void testBasicCopy() {
+		String[] s1 = {"aa", "bb", "cc", "dd", "ee"};
+		String[] s2 = new String[10];
+		System.arraycopy(s1, 2, s2, 6, 3);
+		
+		for(int i=0; i<s2.length; i++) {
+			System.out.println(i + "---" + s2[i]); // 没有值得全部为null
+		}
+	}
+	
+	// 测试从数组中删除某个元素 本质上还是数组的copy
+	public static void testBasicCopy2() {
+		String[] s1 = {"aa", "bb", "cc", "dd", "ee"};
+		String[] s2 = new String[5];
+		
+		System.arraycopy(s1, 3, s2, 3-1, s1.length - 3);
+	}
+}

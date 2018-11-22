@@ -1,0 +1,15 @@
+package com.sxt.io;
+
+// ±àÂë ×Ö·û´® ×Ö½Ú
+
+public class ContentEncode {
+		
+		public static void main(String[] args) {
+				
+				String msg = "ĞÔÃüÊ¹ÃüÉúÃü";
+				
+				byte[] datas = msg.getBytes();
+				
+				System.out.println(datas.length);
+		}
+}

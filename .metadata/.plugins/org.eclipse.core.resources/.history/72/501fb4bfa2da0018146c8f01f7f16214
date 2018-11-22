@@ -1,0 +1,12 @@
+package cn.sxt.mycollection;
+
+// 增加泛型
+
+public class Node3<K,V> {
+		int hash;
+		Object key;
+		Object value;
+		Node2 next;
+}
+
+

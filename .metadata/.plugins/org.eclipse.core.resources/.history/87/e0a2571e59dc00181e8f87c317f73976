@@ -1,0 +1,14 @@
+package com.sxt.io;
+
+/*
+ * 文件的状态
+ * 
+ * 1、是否存在 ： exits
+ * 2、是否是文件：isFile（）
+ * 3、是否是文件夹 isDirectory（） 是否是文件夹
+ * 
+ * */
+
+public class FileDemo04 {
+
+}

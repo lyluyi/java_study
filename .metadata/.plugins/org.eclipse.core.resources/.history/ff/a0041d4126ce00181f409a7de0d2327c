@@ -1,0 +1,14 @@
+package cn.sxt.arrays;
+
+// 数组三种初始化的方式
+
+public class Test02 {
+	public static void main(String[] args) {
+		int[] a = {2,4,65};
+		User[] b = {
+			new User(1, "a"),
+			new User(2, "b"),
+			new User(3, "c")
+		};
+	}
+}

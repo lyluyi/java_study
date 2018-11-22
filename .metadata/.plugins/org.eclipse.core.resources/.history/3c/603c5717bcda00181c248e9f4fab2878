@@ -1,0 +1,12 @@
+package cn.sxt.collection;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+// ≤‚ ‘TreeSet π”√
+
+public class TestTreeSET {
+		public static void main(String[] args) {
+				Set<Integer> set = new TreeSet<>();
+		}
+}

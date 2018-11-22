@@ -1,0 +1,31 @@
+package cn.sxt.collection;
+
+import java.util.*;
+
+// 测试迭代器遍历List Set Map
+
+public class TestIterator {
+		
+		public static void main(String[] args) {
+				
+		}
+		
+		public static void testIteratorList() {
+				List<String> list = new ArrayList<>();
+				
+				list.add("aa");
+				list.add("bb");
+				list.add("cc");
+				list.add("dd");
+				
+				for (Iterator<String> iter=list.iterator(); iter.hasNext();) {
+						// iter=list.iterator() 返回一个迭代器  iter.hasNext() 判断 有没有下一个
+						String temp = iter.next();
+						System.err.println(temp);
+				}
+				
+				
+		}
+		
+		
+}

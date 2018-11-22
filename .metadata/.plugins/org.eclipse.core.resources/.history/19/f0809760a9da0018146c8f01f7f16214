@@ -1,0 +1,20 @@
+package cn.sxt.collection;
+
+import java.util.Map;
+import java.util.TreeMap;
+
+// TreeMap 使用
+
+public class TestTreeMap {
+		public static void main(String[] args) {
+				Map<Integer, String> treemap1 = new TreeMap<>();
+				
+				treemap1.put(20, "aa");
+				treemap1.put(3, "bb");
+				treemap1.put(6, "cc");
+				
+				for (Integer key : treemap1.keySet()) {
+						System.out.println(key + "-----" + treemap1.get(key));
+				}
+		}
+}

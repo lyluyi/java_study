@@ -1,0 +1,12 @@
+package cn.sxt.collection;
+
+import java.util.*; // 这里导包经常自动导入错误
+import java.util.ArrayList;
+
+// Collection 辅助类的使用
+
+public class TestCollections {
+		public static void main(String[] args) {
+			 List<String> list = new ArrayList<>();
+		}
+}

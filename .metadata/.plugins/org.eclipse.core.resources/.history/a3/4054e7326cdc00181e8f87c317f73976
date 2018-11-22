@@ -1,0 +1,85 @@
+package com.sxt.io;
+
+import java.io.File;
+
+/*
+ * 使用面向对象
+ * 
+ * 统计文件夹大小
+ * 
+ * 打印下级目录
+ * 
+ * */
+
+public class DirCount {
+		
+		// 大小
+		private  long len;
+		
+		/*
+		 * 这里的len 为什么没有static关键字
+		 * 
+		 * 
+		 * 然后 private void count(File src) 这个方法也不需要static关键字 给其中任意一个加上static报错
+		 * 
+		 * 同时加上又不会报错！
+		 * 
+		 * */
+		
+		// 文件夹路径
+		private String path;
+		public DirCount(long len) {
+				super();
+				this.len = len;
+		}
+
+		// 源
+		private File src;
+		
+		// 构造器
+		
+
+		public DirCount(String path) {
+				super();
+				this.path = path;
+				this.src = new File(path);
+				
+				// 调用count 传入this.src
+				count(this.src);
+		}
+
+		
+
+		public long getLen() {
+				return len;
+		}
+
+
+
+		public void setLen(long len) {
+				this.len = len;
+		}
+
+
+
+		public static void main(String[] args) {
+				DirCount dirCount = new DirCount("D:/workspace/IO");
+				System.out.println(dirCount.getLen());  // 199467
+		} 
+		
+		// 统计大小
+    private void count(File src) {
+    				
+				if (src !=null && src.exists()) {
+						
+						if (src.isFile()) { // 获取大小
+								len += src.length();
+						} else { // 下级目录
+								for (File s : src.listFiles()) {
+										count(s);
+								}
+						}
+				}
+		}
+}
+

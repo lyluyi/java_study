@@ -1,0 +1,21 @@
+package com.sxt.io;
+
+import java.io.File;
+
+/*
+ * 使用递归
+ * 
+ * 打印下级目录
+ * 
+ * */
+
+public class DirDemo04 {
+		public static void main(String[] args) {
+				
+		}
+		
+		public static void printName(File src) {
+				System.out.println(src.getName());
+		}
+}
+

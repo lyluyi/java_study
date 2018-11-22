@@ -1,0 +1,52 @@
+package cn.sxt.oo2;
+
+// final 修饰符
+
+public class TestFinal {
+		public static void main(String args[]) {
+				Animal a = new Animal();
+				animalCry(a);
+				
+				Animal d = new Dog(); // 自动向上转型 子类转向父类
+//				d.seeDoor(); // 此时 d 为Dog的实例 但是属于Animal类 因此 无法使用子类Dog的方法
+				animalCry(d);
+				
+				Dog d2 = (Dog)(d); // 强制向下转型
+				d2.seeDoor();
+				
+				Animal c = new Cat();
+				
+				Dog d3 = (Dog)(c); // C为cat的实例 但是属于Animal类 
+//				d3.seeDoor(); // 编辑器可以通过 
+												// 但是运行会报错 cn.sxt.oo2.Cat cannot be cast to cn.sxt.oo2.Dog
+			}	
+			
+			static void animalCry(Animal a) { // 传Animal a的实例（父类）的实例 可以保证气他子类也可以调用 
+				a.shout();											// 通过父类引用指向子类
+			}
+			
+		}
+
+		class Animal { // final class Animal final 修饰后 无法被继承
+			public void shout() {
+				System.out.println("叫了一声");
+			}
+			
+			
+		}
+
+		class Dog extends Animal { 
+			public void shout() { // 重写父类方法
+				System.out.println("狗叫");
+			}
+			
+			public void seeDoor() {
+					System.out.println("看门");
+			}
+		}
+
+		class Cat extends Animal {
+			public void shout() {
+				System.out.println("猫叫");
+			}
+		}

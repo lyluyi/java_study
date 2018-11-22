@@ -1,0 +1,24 @@
+package cn.sxt.collection;
+
+import java.util.*;
+import java.util.ArrayList;
+
+// ²âÊÔµü´úÆ÷±éÀúList Set Map
+
+public class TestIterator {
+		
+		public static void main(String[] args) {
+				
+		}
+		
+		public static void testIteratorList() {
+				List<String> list = new ArrayList<>();
+				
+				list.add("aa");
+				list.add("bb");
+				list.add("cc");
+				list.add("aa");
+		}
+		
+		
+}

@@ -1,0 +1,26 @@
+package cn.sxt.oo2;
+
+// 封装 使用细节
+
+public class Person4Encapsulation {
+	private int id;
+	private String name;
+	private int age;
+	private boolean man;
+	
+	public void setName(String name) { // void 不需要返回值
+		this.name  = name;
+	}
+	
+	public String getName () {
+		return this.name;
+	}
+	
+	public void setAge(int age) {
+		if (age>=1&&age<=30) {
+			this.age = age;
+		} else {
+			System.out.println("请输入正常年龄");
+		}
+	}
+}

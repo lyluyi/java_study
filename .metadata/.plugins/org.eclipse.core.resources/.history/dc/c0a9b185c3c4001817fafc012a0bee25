@@ -1,0 +1,11 @@
+// 测试算数运算符
+
+public class TestOperator01 {
+	public static void main(String[] args) {
+		byte a = 1;
+		int b = 2;
+		long b2 = 3;
+//		byte c = a + b; 错误  有int型  结果就是int型
+//		int c = a + b2; 错误  有long型 就为long型
+	}
+}

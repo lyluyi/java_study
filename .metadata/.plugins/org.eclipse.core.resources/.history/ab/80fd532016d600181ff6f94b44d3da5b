@@ -1,0 +1,24 @@
+package cn.sxt.collection;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+// 测试 Collection接口 中的 List方法
+
+public class TestList {	
+	public static void main(String[] args) {
+		Collection<String> c = new ArrayList<>();
+		
+		
+		c.isEmpty(); // 判断是否为空
+		
+		c.add("aaa");
+		c.add("bbb");
+		System.out.println(c);
+		c.size(); // 返回长度
+		System.out.println(c.size());
+		
+		c.remove("aaa");
+		System.out.println(c);
+	}
+}

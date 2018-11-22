@@ -1,0 +1,32 @@
+package com.sxt.io;
+
+import java.io.File;
+
+// 相对路径 绝对路径
+
+public class FileDemo02 {
+
+		public static void main(String[] args) {
+				
+				/*
+				 * 构建File对象
+				 *  
+				 * 相对路径(不存在盘符)
+				 * 
+				 * 绝对路径(有盘符)
+				 * 
+				 **/
+				
+				String path = "D:/workspace/IO/src/IO.jpg"; 
+				
+				// 绝对路径
+				File src = new File(path);
+				
+       // 相对路径
+				src = new File("IO.jpg");
+				
+				
+				
+		}
+		
+}

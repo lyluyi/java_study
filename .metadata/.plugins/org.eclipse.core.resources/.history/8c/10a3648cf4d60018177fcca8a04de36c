@@ -1,0 +1,7 @@
+package cn.sxt.mycollection;
+
+//  还需要一个节点对象 Node 
+
+public class SxtLinkedList {
+
+}

@@ -1,0 +1,52 @@
+package cn.sxt.oo2;
+
+public class TestPolym {
+	public static void main(String args[]) {
+		Animal a = new Animal();
+		animalCry(a);
+		
+		Animal d = new Dog(); // 自动向上转型 子类转向父类
+		animalCry(d);
+		
+		Dog d2 = (Dog)(d); // 强制向下转型
+	}
+	
+	static void animalCry(Animal a) { // 传Animal a的实例（父类）的实例 可以保证气他子类也可以调用 
+		a.shout();											// 通过父类引用指向子类
+	}
+	
+//static void animalCry(Dog d) { // 传Dog d的实例（子烈）的实例 那么其它子类又无法调用 
+//a.shout();                     // 从而也无法实现多态 必须再进行其它子类的重写
+//}
+
+	
+//static void animalCry(Cat c) { // 
+//a.shout();
+//}
+
+	
+	
+	
+}
+
+class Animal {
+	public void shout() {
+		System.out.println("叫了一声");
+	}
+	
+	public void seeDoor() {
+			System.out.println("看门");
+	}
+}
+
+class Dog extends Animal { 
+	public void shout() { // 重写父类方法
+		System.out.println("狗叫");
+	}
+}
+
+class Cat extends Animal {
+	public void shout() {
+		System.out.println("猫叫");
+	}
+}

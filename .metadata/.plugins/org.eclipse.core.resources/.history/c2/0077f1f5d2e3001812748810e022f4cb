@@ -1,0 +1,23 @@
+package com.sxt.commons;
+
+import java.io.File;
+import java.util.Collection;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.filefilter.EmptyFileFilter;
+
+/**
+ * 
+  * 列出  子孙节点
+ * 
+ * 
+ * 
+ * */
+public class CIOTest02 {
+		public static void main(String[] args) {
+			Collection<File> files = FileUtils.listFiles(new File("D:/workspace/IO3"), EmptyFileFilter.NOT_EMPTY, null);
+			for (File file : files) {
+					System.out.println(file.getAbsolutePath());
+			}
+		}
+}

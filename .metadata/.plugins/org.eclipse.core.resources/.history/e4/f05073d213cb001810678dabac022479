@@ -1,0 +1,9 @@
+package cn.sxt.oo2;
+
+public class TestObject {
+	public static void main(String[] args) {
+//		Object obj;
+			TestObject to = new TestObject();
+			System.out.println(to);
+	}
+}

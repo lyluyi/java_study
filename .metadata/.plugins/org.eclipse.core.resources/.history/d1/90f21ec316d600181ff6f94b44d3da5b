@@ -1,0 +1,32 @@
+package cn.sxt.collection;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+// 测试 Collection接口 中的 List方法
+
+public class TestList {	
+	public static void main(String[] args) {
+		Collection<String> c = new ArrayList<>();
+		
+		
+		c.isEmpty(); // 判断是否为空
+		
+		c.add("aaa");
+		c.add("bbb");
+		System.out.println(c);
+		c.size(); // 返回长度
+		System.out.println(c.size());
+		
+		Object object = c.toArray(); // 转化为object数组
+		
+		System.out.println(object); //
+		
+		c.remove("aaa"); // 移除 只是移除容器中的引用地址 并非移除了 “aaa”对象
+		System.out.println(c);
+		System.out.println(c.size());
+		
+		c.clear();
+		System.out.println(c);
+	}
+}

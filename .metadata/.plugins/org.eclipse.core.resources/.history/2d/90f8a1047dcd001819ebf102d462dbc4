@@ -1,0 +1,23 @@
+package cn.sxt.oo2;
+
+public class TestPolym {
+
+}
+
+class Animal {
+	public void shout() {
+		System.out.println("Ω–¡À“ª…˘");
+	}
+}
+
+class Dog extends Animal {
+	public void shout() {
+		System.out.println("π∑Ω–");
+	}
+}
+
+class Cat extends Animal {
+	public void shout() {
+		System.out.println("√®Ω–");
+	}
+}

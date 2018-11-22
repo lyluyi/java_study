@@ -1,0 +1,16 @@
+package cn.sxt.exception;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+public class Test02 {
+	public static void main(String[] args) {
+		try {
+				FileReader reader = new FileReader("D:\\a.txt");
+				// 类似于这种处理 编译的阶段一般都需要异常处理机制 
+		} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+		}
+	}
+}

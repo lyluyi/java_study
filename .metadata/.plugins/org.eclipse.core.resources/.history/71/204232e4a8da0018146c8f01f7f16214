@@ -1,0 +1,15 @@
+package cn.sxt.collection;
+
+import java.util.Map;
+
+import java.util.TreeMap;
+
+// TreeMap 使用
+
+public class TreeMap {
+		public static void main(String[] args) {
+				Map<Integer, String> treemap1 = new TreeMap<>();
+				
+				
+		}
+}

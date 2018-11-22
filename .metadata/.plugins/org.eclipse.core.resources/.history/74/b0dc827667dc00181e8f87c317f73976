@@ -1,0 +1,38 @@
+package com.sxt.io;
+
+import java.io.File;
+
+/*
+ * 使用递归
+ * 
+ * 打印下级目录
+ * 
+ * */
+
+public class DirDemo04 {
+		public static void main(String[] args) {
+				
+				File src = new File("D:/test");
+				printName(src, 0);
+				
+		}
+		
+		public static void printName(File src, int deep) {
+				for (int i = 0; i < deep; i++) {
+						System.out.print("-");
+				}
+				
+				System.out.println(src.getName());
+				
+				if (null == src || !src.exists()) { // 是否存在
+						return;
+				} else if (src.isDirectory()) { // 是否为目录
+						
+						// 循环输出 的先后 是先进行目录级别的遍历 如果当前目录下面有子目录 那么
+						for (File s : src.listFiles()) {
+								printName(s, deep + 1);
+						}
+				}
+		}
+}
+

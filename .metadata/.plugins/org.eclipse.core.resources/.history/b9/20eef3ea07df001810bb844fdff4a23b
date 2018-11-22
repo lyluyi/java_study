@@ -1,0 +1,7 @@
+package com.sxt.io;
+
+// 封装拷贝
+
+public class FileUtils {
+
+}

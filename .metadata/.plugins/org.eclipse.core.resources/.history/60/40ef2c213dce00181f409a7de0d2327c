@@ -1,0 +1,10 @@
+package cn.sxt.arrays;
+
+// ½Ó¿Ú Interface
+
+public interface  MyInterface {
+   /*public static final*/  	int Max_AGE = 100;
+	
+	/*public abstract static*/ void test01();
+	
+}

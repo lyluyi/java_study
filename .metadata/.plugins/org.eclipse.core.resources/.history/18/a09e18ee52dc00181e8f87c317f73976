@@ -1,0 +1,23 @@
+package com.sxt.io;
+
+import java.io.File;
+
+public class FileDemo01 {
+		
+		public static void main(String[] args) {
+				
+				/*
+				 * 构建File对象
+				 * 
+				 * 
+				 * */
+				
+				String path = "D:/workspace/IO/src/IO.jpg";
+				
+				// 构建的File对象
+				File src = new File(path);
+				
+				System.out.println(src.length());
+		}
+
+}

@@ -1,0 +1,26 @@
+package com.sxt.server.basic;
+
+/*
+ * 
+ * 反射：把java类中的各种结构（方法、属性、构造器、类名）映射成一个个java对象
+ * 
+ * 
+ */
+
+public class ReflectTest {
+
+		public static void main(String[] args) {
+				
+				// 三种方式
+				
+				// 1
+				
+				
+		}
+}
+
+class Iphone {
+	public Iphone()	{ // 无参构造
+			
+	}
+}

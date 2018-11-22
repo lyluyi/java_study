@@ -1,0 +1,63 @@
+package com.sxt.io;
+
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;import javax.imageio.ImageTypeSpecifier;
+
+/*
+ * 
+ *  字节数组输出流
+ *  
+ * 理解操作步骤: 分段读取
+ * 
+ * 1、创建源
+ * 2、选择流
+ * 3、操作
+ * 4、释放资源
+ * 
+ * */ 
+
+public class IOTest07 {
+
+		public static void main(String[] args) {
+				
+				// 1、创建源  字节流数组
+				byte[] src = "talk is cheap show me the code.".getBytes(); // 多敲代码少说话
+				
+				InputStream is = null;
+				
+				// 2、选择流
+				try {
+						
+						is = new ByteArrayInputStream(src);
+						
+						// 3、读取（操作）
+						byte[] flush = new byte[5]; // 缓冲容器 1k
+						int len = -1; // 接收长度
+						while ((len =is.read(flush)) != -1) { // 每三个读取一次
+								
+								// 字节数组 ---> 字符串解码
+								String str = new String(flush,0,len);
+								System.out.println(str); // 每三个输出一次
+								
+						}
+				} catch (FileNotFoundException e) {
+						e.printStackTrace();
+				} catch (IOException e) {
+						e.printStackTrace();
+				} finally {
+						try {
+								if (null!=is) {
+										is.close();
+								}
+								
+						} catch (IOException e) {
+								e.printStackTrace();
+						}
+				}
+				
+		}
+}

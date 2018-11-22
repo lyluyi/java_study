@@ -1,0 +1,9 @@
+// 测试字符类型
+public class TestPrimitiveDataType3 {
+	public static void main(String[] args) {
+		char a = 'T'; // 用单引号表示一个字符
+		char b = '好';
+		char c = '\u0061';
+		System.out.println(c);
+	}
+}

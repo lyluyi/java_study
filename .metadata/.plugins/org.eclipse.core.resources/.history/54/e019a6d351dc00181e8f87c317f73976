@@ -1,0 +1,20 @@
+package com.sxt.io;
+
+import java.io.File;
+
+// IO 文件流
+
+public class PathDemo01 {
+		public static void main(String[] args) {
+				/*
+				 * 
+				 * \ 为名称分隔符  实际就是转义字符 separator
+				 * 
+				 * */
+				
+				String path = "D:\\workspace\\IO\\src\\IO.jpg";
+				
+				System.out.println(File.separatorChar);
+				
+		}
+}

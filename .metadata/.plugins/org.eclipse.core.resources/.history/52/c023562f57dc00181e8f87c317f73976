@@ -1,0 +1,20 @@
+package com.sxt.io;
+
+/*
+ * Ãû³Æ»òÂ·¾¶
+ * 
+ * getName()
+ * getPath()
+ * getParent()
+ * 
+ * */
+
+public class FileDemo03 {
+		
+		public static void main(String[] args) {
+				
+				File src = new File("D:\\workspace\\IO\\src\\IO.jpg");
+				
+		}
+		
+}

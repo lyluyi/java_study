@@ -1,0 +1,13 @@
+package com.sxt.io;
+
+/*
+ * 其它信息：
+ * createNewFile() // 创建文件 
+ * 
+ * delete()
+ * 
+ * **/
+
+public class FileDemo06 {
+
+}

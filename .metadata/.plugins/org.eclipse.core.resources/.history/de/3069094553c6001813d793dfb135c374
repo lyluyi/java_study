@@ -1,0 +1,15 @@
+// ≤‚ ‘µ›πÈ
+public class TestRecursion01 {
+	public static void main(String[] agrs) {
+		
+	}
+	
+	static void a() {
+		System.out.println("a");
+		a();
+	}
+	
+	static void b() {
+		System.out.println("B");
+	}
+}

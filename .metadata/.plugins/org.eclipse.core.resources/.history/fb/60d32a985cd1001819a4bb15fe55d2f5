@@ -1,0 +1,52 @@
+package cn.sxt.array2;
+
+// 测试数组拷贝
+
+public class TestArrayCopy {
+	public static void main(String[] args) {
+//		testBasicCopy2();
+			String[] str = {"a", "b", "c", "d", "e"};
+			removeIndex(str, 1);
+	}
+	
+	// 数组的copy
+	public static void testBasicCopy() {
+		String[] s1 = {"aa", "bb", "cc", "dd", "ee"};
+		String[] s2 = new String[10];
+		System.arraycopy(s1, 2, s2, 6, 3);
+		
+		for(int i=0; i<s2.length; i++) {
+			System.out.println(i + "---" + s2[i]); // 没有值得全部为null
+		}
+	}
+	
+	// 测试从数组中删除某个元素 本质上还是数组的copy
+	public static void testBasicCopy2() {
+		String[] s1 = {"aa", "bb", "cc", "dd", "ee"};
+		String[] s2 = new String[5];
+		
+		System.arraycopy(s1, 3, s2, 3-1, s1.length - 3);
+		
+		for(int i=0; i<s2.length; i++) {
+			System.out.println(i + "---" + s2[i]); // 没有值得全部为null
+		}
+		
+		System.arraycopy(s1, 3, s1, 3-1, s1.length - 3);
+		s1[s1.length -1] = null; // 最后一项置为null
+		
+		for(int i=0; i<s1.length; i++) {
+			System.out.println(i + "---" + s1[i]);
+		}					
+	}
+	
+	public static String[] removeIndex(String[] s, int index) {
+		System.arraycopy(s, index, s, index-1, s.length - index);
+		s[s.length - 1] = null;
+		
+		for(int i=0; i<s.length; i++) {
+			System.out.println(i + "---" + s[i]); 
+		}					
+		
+		return s;
+	}
+}

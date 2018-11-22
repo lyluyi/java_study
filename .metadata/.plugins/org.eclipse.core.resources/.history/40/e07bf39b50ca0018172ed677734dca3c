@@ -1,0 +1,21 @@
+package cn.sxt.gao;
+
+//import cn.sxt.oo.User; // 导入包中的类
+
+import cn.sxt.oo.*; // 导入包中的所有类
+
+import java.util.*;
+
+import java.util.Date;
+
+import java.sql.*;
+
+import static java.lang.Math.*; // 导入java lang包中的静态属性
+
+public class Test {
+	public static void main(String[] args) {
+//		cn.sxt.oo.User user = new cn.sxt.oo.User(); 当遇到导入类名冲突时，可以这样直接使用
+			User user = new User();
+			
+	}
+}

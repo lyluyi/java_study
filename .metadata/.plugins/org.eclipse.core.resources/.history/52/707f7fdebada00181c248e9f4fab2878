@@ -1,0 +1,26 @@
+package cn.sxt.mycollection;
+
+import java.util.HashMap;
+
+import javax.naming.InitialContext;
+
+// 手动实现一个HashSet 理解HashSet 底层原理
+
+public class SxtHashSet {
+		HashMap map;
+		
+		private static final Object PRESENT = new Object();
+		
+		public SxtHashSet() {
+				map = new HashMap();
+		}
+		
+		public int size() {
+				return map.size();
+		}
+		
+		public void add(Object o) {
+				map.put(o, PRESENT);
+		}
+		
+}

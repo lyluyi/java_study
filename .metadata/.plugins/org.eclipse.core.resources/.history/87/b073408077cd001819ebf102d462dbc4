@@ -1,0 +1,7 @@
+package cn.sxt.oo2;
+
+// 封装 使用细节
+
+public class Person4Encapsulation {
+	
+}

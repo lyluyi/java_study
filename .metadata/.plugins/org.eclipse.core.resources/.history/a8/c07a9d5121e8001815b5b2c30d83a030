@@ -1,0 +1,22 @@
+package com.sxt.thread;
+
+// lambda ÍÆµ¼
+
+public class LambdaTest01 {
+		
+		
+		
+}
+
+interface alike{
+		void lambda();
+}
+
+class blike implements alike {
+
+		@Override
+		public void lambda() {
+				System.out.println("like lambda");
+		}
+		
+}

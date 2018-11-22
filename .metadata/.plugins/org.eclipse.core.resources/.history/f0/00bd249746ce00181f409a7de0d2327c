@@ -1,0 +1,10 @@
+package cn.sxt.arrays;
+
+// ≤‚ ‘String API
+
+public class TestStringAPI {
+	public static void main(String[] args) {
+		String s1 = "abcde";
+		System.out.println(s1.charAt(3));
+	}
+}

@@ -1,0 +1,61 @@
+package com.sxt.io;
+
+import java.io.File;
+
+/*
+ * 列出下一级
+ * 
+ * 1、 list() 列出下一级名称
+ * 2、 listFile() 列出下级File对象
+ * 
+ * 
+ * **/
+
+public class DirDemo02 {
+		public static void main(String[] args) {
+				
+				File dir = new File("D:/workspace/IO");
+				
+				// 列出下级名称list 这里返回的是String 字符串对象 即名称
+				String[] subNames = dir.list();
+				for (int i = 0; i < subNames.length; i++) {
+						System.out.println(subNames[i]);
+						/*
+						 * .classpath
+                .project
+                .settings
+                bin
+                dir
+                src
+                src1
+						 * 
+						 * */			
+						
+				}
+				
+				// 列出下级对象 listFiles 这里返回的File 对象
+				File[] subFlies = dir.listFiles();
+				// 这里dir.listFiles(); 返回的都是File实例类 所以不能用String类的[] 去声明
+				
+				for(File s: subFlies) {
+						System.out.println(s);
+						
+						/*
+						 * D:\workspace\IO\.classpath
+               D:\workspace\IO\.project
+               D:\workspace\IO\.settings
+               D:\workspace\IO\bin
+               D:\workspace\IO\dir
+               D:\workspace\IO\src
+               D:\workspace\IO\src1
+						 * 
+						 * 
+						 * **/
+				}
+				
+				
+				
+				
+				
+		}
+}

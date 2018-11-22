@@ -1,0 +1,14 @@
+package cn.sxt.collection;
+
+import java.util.HashMap;
+import java.util.Map;
+
+// 测试HashMap
+
+public class TestMap {
+		public static void main(String[] args) {
+				Map<Integer, String> m1 = new HashMap<>();
+				
+				m1.put(1, "one");
+		}
+}

@@ -1,0 +1,12 @@
+package cn.sxt.gao;
+
+//import cn.sxt.oo.User; // 导入包中的类
+
+import cn.sxt.oo.*; // 导入包中的所有类
+
+public class Test {
+	public static void main(String[] args) {
+//		cn.sxt.oo.User user = new cn.sxt.oo.User(); 当遇到导入类名冲突时，可以这样直接使用
+			
+	}
+}

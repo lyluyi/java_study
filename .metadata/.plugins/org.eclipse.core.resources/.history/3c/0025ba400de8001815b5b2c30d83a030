@@ -1,0 +1,35 @@
+package com.sxt.thread;
+
+import java.net.URL;
+
+public class TDownLoader extends Thread {
+		private String url; // 远程路径
+		private String name;  // 存贮路径
+		
+		
+		
+		public TDownLoader(String url, String name) {
+				super();
+				this.url = url;
+				this.name = name;
+		}
+
+
+
+		@Override
+		public void run () {
+				WebDownLoader wd = new WebDownLoader();
+				wd.downlaod(url, name);
+		}
+		
+		public static void main(String[] args) {
+				TDownLoader td1 = new TDownLoader("http://img6.chinaxinge.com/gif3/olgj181112.gif", "1.jpg");
+//				TDownLoader td2 = new TDownLoader("http://img0.imgtn.bdimg.com/it/u=1767007821,572633337&fm=26&gp=0.jpg", "2.jpg");
+//				TDownLoader td3 = new TDownLoader("http://img5.imgtn.bdimg.com/it/u=1982266862,1286115675&fm=26&gp=0.jpg", "3.jpg");
+				
+				// 启动三个线程
+				td1.start();
+//				td2.start();
+//				td3.start();
+		}
+}

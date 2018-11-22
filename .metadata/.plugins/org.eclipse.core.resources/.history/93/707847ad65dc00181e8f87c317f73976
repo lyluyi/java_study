@@ -1,0 +1,35 @@
+package com.sxt.io;
+
+import java.io.File;
+
+/*
+ * 使用递归
+ * 
+ * 打印下级目录
+ * 
+ * */
+
+public class DirDemo04 {
+		public static void main(String[] args) {
+				
+				File src = new File("D:/workspace/IO");
+				printName(src, 0);
+				
+		}
+		
+		public static void printName(File src, int deep) {
+				System.out.println(src.getName());
+				String string = "";
+				for (int i = 0; i < deep; i++) {
+						string += "-";
+				}
+				if (null == src || !src.exists()) { // 是否存在
+						return;
+				} else if (src.isDirectory()) { // 是否为目录
+						for (File s : src.listFiles()) {
+								printName(s, deep + 1);
+						}
+				}
+		}
+}
+

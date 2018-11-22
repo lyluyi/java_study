@@ -1,0 +1,12 @@
+// 方法的使用
+public class TestMethod {
+	public static void main(String[] args) {
+		
+	}
+	
+	void printSxt () { // 加void的方法 表明没有返回值的意思
+		System.out.println("1111");
+		System.out.println("11112");
+		System.out.println("11113");
+	}
+}

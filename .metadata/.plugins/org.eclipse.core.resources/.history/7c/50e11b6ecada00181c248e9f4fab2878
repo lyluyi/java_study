@@ -1,0 +1,19 @@
+package cn.sxt.collection;
+
+import java.util.HashMap;
+import java.util.Map;
+
+// 测试表格数据存贮
+
+public class TestSortData {
+
+		public static void main(String[] args) {
+				Map<String, Object> row1 = new HashMap<>();
+				
+				row1.put("id", 1001);
+				row1.put("name", "aaa");
+				row1.put("salary", 20000);
+				row1.put("joinDate", "2018.5.5");
+		}
+		
+}
